@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About | Sarah Web Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#F5F9FC;
+color:#1E293B;
+line-height:1.6;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position:relative;
+}
+
+.logo img{
+height:50px;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#1E293B;
+font-weight:500;
+}
+
+nav a:hover{
+color:#2FA4B7;
+}
+
+.hamburger{
+display:none;
+flex-direction:column;
+cursor:pointer;
+gap:5px;
+}
+
+.hamburger span{
+width:25px;
+height:3px;
+background:#1E293B;
+}
+
+
+/* PAGE HEADER */
+
+.about-header{
+text-align:center;
+padding:80px 20px 40px;
+}
+
+.about-header h1{
+font-family:'Poppins',sans-serif;
+font-size:42px;
+margin-bottom:10px;
+}
+
+.about-header p{
+color:#64748B;
+}
+
+
+/* ABOUT SECTION */
+
+.about-section{
+max-width:1000px;
+margin:auto;
+background:white;
+padding:60px;
+border-radius:18px;
+box-shadow:0 20px 60px rgba(0,0,0,0.08);
+margin-bottom:80px;
+}
+
+.about-section h2{
+font-family:'Poppins',sans-serif;
+margin-bottom:15px;
+}
+
+.about-section p{
+color:#64748B;
+margin-bottom:15px;
+}
+
+
+/* FEATURES */
+
+.features{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+padding:0 20px 80px;
+}
+
+.feature-card{
+background:white;
+padding:25px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
+}
+
+.feature-card h3{
+font-family:'Poppins',sans-serif;
+margin-bottom:10px;
+}
+
+.feature-card p{
+color:#64748B;
+font-size:14px;
+}
+
+
+/* CTA */
+
+.about-cta{
+text-align:center;
+padding:80px 20px;
+}
+
+.about-cta h2{
+font-family:'Poppins',sans-serif;
+font-size:32px;
+margin-bottom:20px;
+}
+
+.cta-btn{
+padding:14px 32px;
+background:linear-gradient(135deg,#2FA4B7,#3B82F6);
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
+
+
+/* FOOTER */
+
+.footer{
+margin-top:80px;
+background:linear-gradient(135deg,#2FA4B7,#3B82F6);
+color:white;
+padding:40px 20px;
+}
+
+.footer-container{
+max-width:1100px;
+margin:auto;
+}
+
+.footer-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:30px;
+}
+
+.footer-brand{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.footer-brand img{
+width:80px;
+}
+
+.footer-links-box ul{
+list-style:none;
+}
+
+.footer-links-box li{
+margin:5px 0;
+}
+
+.footer-links-box a{
+color:#E2E8F0;
+text-decoration:none;
+}
+
+.footer-divider{
+border:none;
+height:1px;
+background:rgba(255,255,255,0.3);
+margin:30px 0 20px;
+}
+
+.copyright{
+text-align:center;
+font-size:13px;
+color:#E2E8F0;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.navbar{
+padding:15px 20px;
+}
+
+#nav-menu{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:white;
+display:none;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+#nav-menu ul{
+flex-direction:column;
+padding:20px;
+}
+
+#nav-menu.active{
+display:block;
+}
+
+.hamburger{
+display:flex;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
+.about-section{
+padding:40px 20px;
+}
+
+.footer-row{
+flex-direction:column;
+text-align:center;
+}
+
+.footer-brand{
+flex-direction:column;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header class="navbar">
+
+<div class="logo">
+<img src="images/logo.jpeg">
+</div>
+
+<nav id="nav-menu">
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+</nav>
+
+<div class="hamburger" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+</header>
+
+
+<section class="about-header">
+
+<h1>About Sarah Web Studio</h1>
+
+<p>
+Helping businesses build modern websites that grow their online presence.
+</p>
+
+</section>
+
+
+<section class="about-section">
+
+<h2>Who We Are</h2>
+
+<p>
+Sarah Web Studio is a freelance web development service focused on building
+modern, responsive and high-performance websites for businesses and professionals.
+</p>
+
+<p>
+Our goal is to help businesses create a strong online presence with
+clean design and fast-loading websites that attract more customers.
+</p>
+
+</section>
+
+
+<section class="features">
+
+<div class="feature-card">
+<h3>Fast Websites</h3>
+<p>Optimized websites that load quickly.</p>
+</div>
+
+<div class="feature-card">
+<h3>Modern Design</h3>
+<p>Clean UI using modern technologies.</p>
+</div>
+
+<div class="feature-card">
+<h3>Responsive</h3>
+<p>Perfect on mobile, tablet and desktop.</p>
+</div>
+
+<div class="feature-card">
+<h3>Affordable</h3>
+<p>Professional websites at affordable cost.</p>
+</div>
+
+</section>
+
+
+<section class="about-cta">
+
+<h2>Ready to Start Your Project?</h2>
+
+<a href="contact.html" class="cta-btn">Contact Us</a>
+
+</section>
+
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-row">
+
+<div class="footer-brand">
+
+<img src="images/logo.jpeg">
+
+<div>
+<h3>Sarah Web Studio</h3>
+<p>Modern websites for businesses.</p>
+</div>
+
+</div>
+
+<div class="footer-links-box">
+
+<h4>Quick Links</h4>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+<hr class="footer-divider">
+
+<p class="copyright">© 2026 Sarah Web Studio</p>
+
+</div>
+
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

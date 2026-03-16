@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Services | Sarah Web Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#F5F9FC;
+color:#1E293B;
+line-height:1.6;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position:relative;
+}
+
+.logo img{
+height:50px;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#1E293B;
+font-weight:500;
+}
+
+nav a:hover{
+color:#2FA4B7;
+}
+
+/* HAMBURGER */
+
+.hamburger{
+display:none;
+flex-direction:column;
+cursor:pointer;
+gap:5px;
+}
+
+.hamburger span{
+width:25px;
+height:3px;
+background:#1E293B;
+border-radius:3px;
+}
+
+
+/* PAGE HEADER */
+
+.services-header{
+text-align:center;
+padding:80px 20px 40px;
+}
+
+.services-header h1{
+font-family:'Poppins',sans-serif;
+font-size:40px;
+margin-bottom:10px;
+}
+
+.services-header p{
+color:#64748B;
+}
+
+
+/* SERVICES WRAPPER */
+
+.services-wrapper{
+max-width:1000px;
+margin:auto;
+background:white;
+padding:60px;
+border-radius:18px;
+box-shadow:0 20px 60px rgba(0,0,0,0.08);
+}
+
+
+/* SERVICE ROW */
+
+.service-row{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:50px;
+margin-bottom:60px;
+padding:35px;
+border-radius:14px;
+transition:all 0.3s ease;
+border-bottom:1px solid #E2E8F0;
+}
+
+.service-row:last-child{
+border-bottom:none;
+margin-bottom:0;
+}
+
+.service-row.reverse{
+flex-direction:row-reverse;
+}
+
+/* DESKTOP HOVER */
+
+.service-row:hover{
+background:#F8FBFE;
+transform:translateY(-4px);
+box-shadow:0 12px 30px rgba(0,0,0,0.06);
+}
+
+/* MOBILE TOUCH EFFECT */
+
+.service-row:active{
+background:#F8FBFE;
+transform:translateY(-4px);
+box-shadow:0 12px 30px rgba(0,0,0,0.06);
+}
+
+/* IMAGE */
+
+.service-image img{
+width:160px;
+height:160px;
+object-fit:cover;
+border-radius:50%;
+transition:transform 0.3s ease;
+}
+.service-row:hover .service-image img{
+transform:scale(1.08);
+}
+
+/* TEXT */
+
+.service-text{
+max-width:520px;
+}
+
+.service-text h3{
+font-family:'Poppins',sans-serif;
+font-size:24px;
+margin-bottom:10px;
+}
+
+.service-text p{
+color:#64748B;
+margin-bottom:18px;
+line-height:1.7;
+text-align: left;
+}
+
+.service-features{
+margin:20px auto;
+padding-left:20px;
+list-style:none;
+text-align:left;
+max-width:100%;
+color:#64748B;
+}
+.service-features li{
+margin-bottom:8px;
+font-size:14px;
+position:relative;
+padding-left:22px;
+}
+
+.service-features li::before{
+content:"✔";
+position:absolute;
+left:0;
+color:#2FA4B7;
+font-size:14px;
+font-weight:bold;
+
+}
+.service-features li{
+margin-bottom:6px;
+font-size:14px;
+}
+/* BUTTON */
+
+.service-btn{
+display:inline-block;
+padding:12px 24px;
+background:linear-gradient(135deg,#2FA4B7,#3B82F6);
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-size:14px;
+}
+
+.service-buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.secondary-btn{
+background:white;
+color:#2FA4B7;
+border:2px solid #2FA4B7;
+}
+
+/* SERVICES CTA */
+
+.services-cta{
+text-align:center;
+padding:80px 20px;
+margin-top:60px;
+}
+
+.services-cta h2{
+font-family:'Poppins',sans-serif;
+font-size:32px;
+margin-bottom:15px;
+}
+
+.services-cta p{
+color:#64748B;
+margin-bottom:25px;
+}
+
+.cta-btn{
+display:inline-block;
+padding:14px 32px;
+background:linear-gradient(135deg,#2FA4B7,#3B82F6);
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:500;
+}
+
+/* FOOTER */
+
+.footer{
+margin-top:80px;
+background:linear-gradient(135deg,#2FA4B7,#3B82F6);
+color:white;
+padding:40px 20px;
+}
+
+.footer-container{
+max-width:1100px;
+margin:auto;
+}
+
+.footer-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:30px;
+}
+
+.footer-brand{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.footer-brand img{
+width:80px;
+}
+
+.footer-info p{
+color:#E2E8F0;
+font-size:14px;
+}
+
+.footer-links-box ul{
+list-style:none;
+}
+
+.footer-links-box li{
+margin:5px 0;
+}
+
+.footer-links-box a{
+color:#E2E8F0;
+text-decoration:none;
+}
+
+.footer-links-box a:hover{
+color:white;
+}
+
+.footer-divider{
+border:none;
+height:1px;
+background:rgba(255,255,255,0.3);
+margin:30px 0 20px;
+}
+
+.copyright{
+text-align:center;
+font-size:13px;
+color:#E2E8F0;
+}
+
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+.navbar{
+padding:15px 20px;
+}
+
+/* MOBILE MENU */
+
+#nav-menu{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:white;
+display:none;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+#nav-menu ul{
+flex-direction:column;
+padding:20px;
+gap:20px;
+}
+
+#nav-menu.active{
+display:block;
+}
+
+.hamburger{
+display:flex;
+}
+
+/* SERVICES */
+
+.services-wrapper{
+padding:40px 20px;
+}
+
+.service-row{
+flex-direction:column;
+text-align:center;
+gap:25px;
+}
+
+.service-row.reverse{
+flex-direction:column;
+}
+
+.service-image img{
+width:120px;
+height:120px;
+}
+
+.services-header h1{
+font-size:28px;
+}
+.service-buttons{
+    justify-content: center;
+}
+.service-buttons{
+display:flex;
+flex-direction:center;
+align-items:center;
+gap:10px;
+flex-wrap: nowrap;
+}
+.service-buttons a{
+min-width: 140px;
+text-align: center;
+white-space: nowrap;
+}
+.service-btn{
+    padding: 10px 18px;
+    font-size: 13px;
+}
+.service-text{
+max-width:300px;
+margin:auto;
+}
+
+.services-cta h2{
+font-size:26px;
+}
+/* FOOTER */
+
+.footer-row{
+flex-direction:column;
+text-align:center;
+}
+
+.footer-brand{
+flex-direction:column;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header class="navbar">
+
+<div class="logo">
+<img src="images/logo.jpeg" alt="Sarah Web Studio">
+</div>
+
+<nav id="nav-menu">
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+</nav>
+
+<div class="hamburger" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+</header>
+
+
+<section class="services-header">
+
+<h1>How We Help Your Business</h1>
+
+<p>
+Professional website services designed to help businesses grow online.
+</p>
+
+</section>
+
+
+<div class="services-wrapper">
+
+
+<div class="service-row">
+
+<div class="service-image">
+<img src="images/service1.jpg">
+</div>
+
+<div class="service-text">
+
+<h3>Business Website Development</h3>
+
+<p>
+We design and develop professional websites for small businesses.
+Our websites are fast, modern and optimized to convert visitors
+into real customers.
+</p>
+<ul class="service-features">
+<li>Responsive design for mobile & desktop</li>
+<li>Fast loading performance</li>
+<li>SEO-friendly structure</li>
+<li>Modern clean UI</li>
+</ul>
+<div class="service-buttons">
+
+<a href="portfolio.html" class="service-btn">
+View Our Work
+</a>
+
+<a href="contact.html" class="service-btn secondary-btn">
+Start Project
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="service-row reverse">
+
+<div class="service-image">
+<img src="images/service2.jpg">
+</div>
+
+<div class="service-text">
+
+<h3>Portfolio Website Design</h3>
+
+<p>
+Perfect for developers, designers and freelancers who want to
+showcase their skills and projects in a professional way.
+</p>
+<ul class="service-features">
+<li>Responsive design for mobile & desktop</li>
+<li>Fast loading performance</li>
+<li>SEO-friendly structure</li>
+<li>Modern clean UI</li>
+</ul>
+<div class="service-buttons">
+
+<a href="portfolio.html" class="service-btn">
+View Our Work
+</a>
+
+<a href="contact.html" class="service-btn secondary-btn">
+Start Project
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="service-row">
+
+<div class="service-image">
+<img src="images/service3.jpg">
+</div>
+
+<div class="service-text">
+
+<h3>Landing Page Design</h3>
+
+<p>
+High-converting landing pages for marketing campaigns,
+products and services that help increase leads and sales.
+</p>
+<ul class="service-features">
+<li>Responsive design for mobile & desktop</li>
+<li>Fast loading performance</li>
+<li>SEO-friendly structure</li>
+<li>Modern clean UI</li>
+</ul>
+<div class="service-buttons">
+
+<a href="portfolio.html" class="service-btn">
+View Our Work
+</a>
+
+<a href="contact.html" class="service-btn secondary-btn">
+Start Project
+</a>
+
+</div>
+</div>
+
+</div>
+
+
+</div>
+
+<section class="services-cta">
+
+<h2>Ready to Start Your Website Project?</h2>
+
+<p>
+Let's build a modern website that helps your business grow online.
+</p>
+
+<a href="contact.html" class="cta-btn">
+Start Your Project
+</a>
+
+</section>
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-row">
+
+<div class="footer-brand">
+
+<img src="images/logo.jpeg">
+
+<div class="footer-info">
+<h3>Sarah Web Studio</h3>
+<p>Modern websites for businesses.</p>
+</div>
+
+</div>
+
+<div class="footer-links-box">
+
+<h4>Quick Links</h4>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+<hr class="footer-divider">
+
+<p class="copyright">© 2026 Sarah Web Studio</p>
+
+</div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
