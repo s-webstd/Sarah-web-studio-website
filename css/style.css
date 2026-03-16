@@ -9,6 +9,7 @@ font-family:'Inter',sans-serif;
 background:#F5F9FC;
 color:#1E293B;
 line-height:1.6;
+scroll-behavior:smooth;
 }
 
 /* NAVBAR */
@@ -261,6 +262,11 @@ box-shadow:0 20px 40px rgba(0,0,0,0.1);
 width:100%;
 height:180px;
 object-fit:cover;
+transition:0.4s;
+}
+
+.portfolio-card:hover img{
+transform:scale(1.05);
 }
 
 .portfolio-card h3{
@@ -284,6 +290,10 @@ display:flex;
 justify-content:center;
 gap:25px;   /* space between buttons */
 margin-top:25px;
+}
+.container{
+max-width:1200px;
+margin:auto;
 }
 /* PROCESS */
 
