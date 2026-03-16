@@ -98,6 +98,8 @@ color:#64748B;
 display:flex;
 gap:20px;
 flex-wrap:wrap;
+position: relative;
+z-index: 5;
 }
 
 .btn-primary{
@@ -121,6 +123,7 @@ font-weight:500;
 .hero-image img{
 width:480px;
 max-width:100%;
+pointer-events: none;
 }
 
 /* HERO SHAPES */
